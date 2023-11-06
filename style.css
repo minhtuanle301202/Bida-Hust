@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+min-height: 100vh;
+
+}
+header{
+  position: fixed;
+  top:0 ;
+  left :0 ;
+  width: 100%;
+  padding: 10px 80px;
+  background-color: rgb(45, 45, 45);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+}
+.logo-img{
+   width: 200px;
+}
+
+.navigation a{
+  position: relative;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+.navigation a:hover {
+  color: rgb(255,186,0);
+  
+}
+/* .navigation .btnLogin-popup{
+   width: 130px;
+   height: 50px ;
+   border: 2px solid #FFF;
+   outline: none;
+   border-radius: 6px;
+   cursor: pointer;
+   font-size: 1.1em;
+   color: #fff;
+   font-weight: 500;
+   margin-left: 40px ;
+   transition: 0.5s;
+   background-color: transparent;
+}
+.navigation .btnLogin-popup:hover{
+   background: #fff;
+  color: #162938 ; 
+ 
+} */
+.loginBtn{
+  background-color:  rgb(45, 45, 45);
+  border: none;
+  padding: 10px 10px ;
+  cursor: pointer;
+}
+.loginBtn span{
+   color: white;
+   font-size: 35px;
+   
+}
+.navigation a::after{
+  content: '';
+  position: absolute;
+  left:0; 
+ bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: rgb(255,186,0);
+ border-radius: 5px;
+ transform-origin: right ;
+ transform: scaleX(0);
+ transition: transform 0.5s;
+}
+
+.navigation a:hover::after{
+  transform: scaleX(1);
+  transform-origin:left ;
+}
+
+.section1{
+  padding: 150px 20px;  
+  background-image: url('ban-bida.jpeg');
+  background-size:cover ;
+  background-position: center;
+  position: relative;
+}
+
+
+.wz-heading-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -33px;
+}
+
+.wz-heading-inner {
+  display: flex;
+  position: relative;
+  padding: 18px 18px;
+  background: url('https://warningzone.com/wp-content/plugins/warningzone/assets/images/heading-bg.jpg') repeat-x;
+  background-size: auto;
+  min-width: 250px;
+ justify-content: center;
+ align-items: center;
+}
+
+.wz-heading-before {
+  position: absolute;
+  content: '';
+  background: #000000;
+  width: 7px;
+  height: 7px;
+  top: calc(50% - 3px);
+  left: 8px;
+  border-radius: 50%;
+}
+
+.wz-heading {
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+.wz-heading-after {
+  position: absolute;
+  content: '';
+  background: #000000;
+  width: 7px;
+  height: 7px;
+  top: calc(50% - 3px);
+  right: 8px;
+  border-radius: 50%;
+}
+.form-border{
+  border: 4px solid #FFBA00;
+  margin: 0px 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom:60px ;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top:90px ;
+  padding-bottom: 60px;
+
+  gap: 50px;
+}
+.form label{
+ 
+  color: #FFBA00;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.time-input{
+  padding: 10px 340px 10px 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
+  background-color:transparent ;
+  border: none;
+  border-bottom: 2px solid #FFBA00;
+}
+
+.date-input{
+  padding: 10px 370px 10px 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
+  background-color:transparent ;
+  border: none;
+  border-bottom: 2px solid #FFBA00;
+}
+.date-div,
+.time-div{
+  
+  position: relative;
+}
+.date-icon-div,
+.time-icon-div{
+  
+    position: absolute;
+    bottom:5px ;
+    right: 10px;
+}
+.date-icon-div span,
+.time-icon-div span{
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFBA00;
+  
+}
+.date-input::placeholder,
+.time-input::placeholder{
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+#myTime,
+#myDate{
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.name-inf,
+.phone-inf,
+.quantity-inf,
+.date-inf,
+.time-inf
+ {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.name-input{
+  margin-left: 20px;
+  padding-top: 8px;
+  padding-left: 2px;
+  padding-bottom:8px ;
+  padding-right: 15px;
+  font-size: 17px;
+  font-weight: 500;
+  width: 82%;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #FFBA00;
+  color: white  ;
+
+}
+
+.phone-input{
+  margin-left: 20px;
+  padding-top: 8px;
+  padding-left: 2px;
+  padding-bottom:8px ;
+  padding-right: 15px;
+  font-size: 17px;
+  font-weight: 500; 
+  width: 74%;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #FFBA00;
+  color: white  ;
+
+}
+.location-select
+{
+  padding: 10px 5px;
+  font-size: 16px;
+  font-weight: 500;
+ margin-top: 8px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #FFBA00;
+  color: white;
+  outline: none;
+}
+
+.location-select option{
+   color: #000000;
+}
+
+.quantity-select{
+ 
+  padding: 5px 7px;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #FFBA00;
+  color: white;
+  outline: none;
+
+}
+
+.quantity-select option{
+  color: black;
+}
+
+.elementor-field{
+  position: relative;
+}
+.arrow-icon{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.quantity-inf .arrow-icon{
+  position: absolute;
+  right: -5px;
+  bottom: -4px;
+}
+.arrow-icon span{
+  color: #FFBA00;
+  font-size: 33px;
+}
+.check-inf{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.checkBtn{
+  color: #FFBA00;
+  padding: 8px 12px;
+  background: transparent;
+  border: 2px solid #FFBA00;
+  border-radius: 2px;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 18px;
+}
+.checkBtn:hover{
+  color: white;
+  border-color: white;
+}
+
+
+.section2{
+  background-color: rgb(51, 50, 50);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between ;
+  padding: 30px 45px 30px 45px ; 
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ margin-bottom: 20px; 
+}
+.col h3,
+.col-register h3,
+.col-register h4{
+  width: 420px; 
+  margin-bottom: 20px;
+  color: #e2e2e2;
+}
+.col .logo{
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.col-register{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ margin-bottom: 20px; 
+}
+.col-register h3 {
+  color: #FFBA00;
+}
+.col-register .email-receive-inf{
+  background-color: transparent;
+  padding: 10px 10px 10px 5px;
+  border: 2px solid #FFBA00;
+  border-radius: 2px;
+  margin-top: 10px;
+  width: 200px;
+  color: #FFBA00;
+}
+.email-receive-inf::placeholder{
+  color: #FFBA00;
+  font-size: 14px;
+}
+.email-receive-inf:focus{
+  border: 2px solid #FFBA00;
+
+}
+
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-left: 20px ;
+  margin-top: 12px;
+}
+.error span{
+   color: #D7524F;
+   font-size: 22px;
+   font-weight: 600;
+}
+.error p{
+  color:#D7524F ;
+  font-size: 18px;
+  font-weight: 600;
+}
