@@ -10,6 +10,8 @@ let locations = document.querySelector('.location-select') ;
 let time_input = document.querySelector('#myTime') ;
 let date_input = document.querySelector('#myDate') ;
 let check = document.querySelector('.checkBtn') ;
+let popup = document.querySelector('.popup') ;
+let popup_button = document.querySelector('.popup-button') ;
 let html1 = `<div class="error">
 <span class="material-symbols-outlined">
   close
@@ -118,13 +120,25 @@ let  locationValue = locations.value ;
 
  if(checkname != 0 || checkphone != 0  || checklocation != 0 || checkdate != 0 || checktime != 0) 
    div_extend_check.innerHTML = html3 ;
-  else div_extend_check.innerHTML = `` ; 
-
-
+  else {
+    div_extend_check.innerHTML = `<div class="done">
+    <span class="material-symbols-outlined">
+    done
+   </span>
+      <p>Chúng tôi đã nhận được yêu cầu của bạn</p>
+    </div>` ; 
+   
+      popup.classList.remove('popup-disappear') ;
+    
+  }
   console.log(checkname) ;
   console.log(checkphone) ;
   console.log(checklocation) ;
   console.log(checkdate) ;
   console.log(checktime) ;
 
+})
+
+popup_button.addEventListener('click',() => {
+  popup.classList.toggle('popup-disappear') ;
 })

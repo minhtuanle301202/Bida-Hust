@@ -10,6 +10,47 @@
 body {
 min-height: 100vh;
 
+
+}
+.div-body {
+  position: relative;
+ 
+}
+
+.popup{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #141414;
+  flex-direction: column;
+  padding: 60px 10px;
+  z-index: 100; 
+}
+.popup-disappear {
+   display: none;
+}
+.popup div{
+  color: #FFBA00;
+  font-size: 17px;
+  font-weight: 500;   
+  width: 400px;
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 35px;
+}
+.popup button{
+  padding: 5px 40px;
+  background-color: #FFBA00;
+  border: none;
+  border-radius: 3px;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 header{
   position: fixed;
@@ -92,10 +133,11 @@ header{
 .section1{
   padding: 150px 20px;  
   background-image: url('bida-table-img.jpg');
-  background-size:cover ;
-  background-position: center;
+  background-size:1700px 800px ;
+  background-position: center center;
   background-repeat: no-repeat;
   position: relative; 
+  background-color: #000000;
 }
 
 
@@ -277,6 +319,7 @@ header{
   border-bottom: 0.5px solid #FFBA00;
   color: white;
   outline: none;
+  cursor: pointer;
 }
 
 .location-select option{
@@ -308,7 +351,9 @@ header{
   right: 0;
   bottom: 0;
 }
-
+.location-inf .arrow-icon {
+  right: 15px;
+}
 .quantity-inf .arrow-icon{
   position: absolute;
   right: -5px;
@@ -356,11 +401,25 @@ header{
  margin-bottom: 20px; 
 }
 .col h3,
-.col-register h3,
-.col-register h4{
+.col-register h3
+{
   width: 420px; 
   margin-bottom: 20px;
   color: #e2e2e2;
+}
+.col h4 {
+  width: 420px;
+  margin-bottom: 20px;
+  color: #e2e2e2;
+  font-weight: 500;
+  font-size: 17px;
+}
+.col-register h4{
+  width: 420px;
+  margin-bottom: 20px;
+  color: #e2e2e2;
+  font-weight: 500;
+  font-size: 17px;
 }
 .col .logo{
   width: 180px;
@@ -415,6 +474,25 @@ header{
   font-weight: 600;
 }
 
+
+.done {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-left: 20px ;
+  margin-top: 12px;
+}
+.done span{
+   color: white;
+   font-size: 22px;
+   font-weight: 600;
+}
+.done p{
+  color:white ;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .footer {
   padding: 20px 30px 20px 30px;
   background-color: #141414;
@@ -438,3 +516,5 @@ header{
   margin-right: 10px;
   cursor: pointer ;
 }
+
+
